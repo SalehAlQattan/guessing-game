@@ -1,11 +1,12 @@
 // Styles
-import { InputField } from '../styles';
+import { InputField, Label } from '../styles';
 // Components
-import Button from './Button';
+import Submit from './Submit';
 // importing useStates
 import { useState } from 'react';
 
-const Input = ({ attemps, setAttemps }) => {
+const Input = () => {
+  // Input State
   const [guessedNumber, setGuessedNumber] = useState(0);
 
   const handleChange = e => {
@@ -14,17 +15,15 @@ const Input = ({ attemps, setAttemps }) => {
 
   return (
     <>
+      <Label>Enter Your Guess Below</Label>
       <InputField
         onChange={handleChange}
+        type="number"
         max="10"
         min="0"
         placeholder="Max 10 & Min 0"
       />
-      <Button
-        setAttemps={setAttemps}
-        attemps={attemps}
-        guessedNumber={guessedNumber}
-      />
+      <Submit guessedNumber={guessedNumber} />
     </>
   );
 };

@@ -25,7 +25,6 @@ function App() {
   const [buttonText, setButtonText] = useState('Light');
   // Theme state
   const [currentTheme, setCurrentTheme] = useState('dark');
-
   /***************************************************************/
 
   // Toggle The Theme
@@ -52,8 +51,8 @@ function App() {
       </ThemeTogglerButton>
       <Container>
         <h1>Welcome To The Guessing Game</h1>
-        <h2>You Have Only 5 Attemps!</h2>
-        <h3>Guess a Number Between 0 & 10!</h3>
+        <h1>You Have Only 5 Attempts!</h1>
+        <h1>Guess a Number Between 0 & 10!</h1>
         <InputContainer>
           <Input />
         </InputContainer>

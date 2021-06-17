@@ -9,29 +9,20 @@ export const GlobalStyle = createGlobalStyle`
     width: 70%;
     margin: 0 auto;
     font-size: 1.6rem;
+    background: ${({ theme }) => theme.backgroundColor};
   }
 `;
 
 export const Container = styled.div`
-  height: 100vh;
-  background: ${props => props.theme.backgroundColor};
-  color: ${props => props.theme.color};
+  color: ${({ theme }) => theme.color};
   h1 {
     text-align: center;
-  }
-  h2 {
-    text-align: center;
-    font-weight: bold;
-  }
-  h3 {
-    text-align: center;
-    font-weight: bold;
   }
 `;
 
 export const ThemeTogglerButton = styled.button`
-  background: ${props => props.theme.color};
-  color: ${props => props.theme.backgroundColor};
+  background: ${({ theme }) => theme.color};
+  color: ${({ theme }) => theme.backgroundColor};
   font-size: 2rem;
   padding: 0.5rem;
   text-align: left;
@@ -42,36 +33,58 @@ export const ThemeTogglerButton = styled.button`
 `;
 
 export const InputContainer = styled.div`
-  /* width: 100%; */
-  /* height: 50vh; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: space-around; */
-  margin: 0 auto;
-  /* background: ${props => props.theme.color}; */
-  color: ${props => props.theme.backgroundColor};
+  color: ${({ theme }) => theme.backgroundColor};
+  background: ${({ theme }) => theme.color};
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+`;
+
+export const Label = styled.div`
+  font-size: 3rem;
+  font-weight: bold;
 `;
 
 export const InputField = styled.input`
-  font-size: 1.6rem;
+  font-size: 2rem;
+  width: 50%;
+  padding: 1rem;
+  border-radius: 5px;
 `;
 
+// in the styles full name
+
 export const SubmitButton = styled.button`
-  background: ${props => props.theme.backgroundColor};
-  color: ${props => props.theme.color};
+  background: ${({ theme }) => theme.backgroundColor};
+  color: ${({ theme }) => theme.color};
+  padding: 0.5rem;
+  width: 53%;
   border-radius: 5px;
-  display: block;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: 2rem;
   cursor: pointer;
+  letter-spacing: 4px;
+`;
+
+export const ResetButton = styled.button`
+  background: ${({ theme }) => theme.backgroundColor};
+  color: ${({ theme }) => theme.color};
+  padding: 0.5rem;
+  width: 53%;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2rem;
+  cursor: pointer;
+  letter-spacing: 4px;
 `;
 
 export const Message = styled.div`
-  /* width: 100%; */
-  /* margin: 0 auto; */
-  /* background: red; */
   h1 {
-    color: ${props => props.theme.color};
+    color: ${({ theme }) => theme.backgroundColor};
   }
 `;
