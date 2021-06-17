@@ -22,13 +22,13 @@ const Submit = ({ guessedNumber }) => {
     // checking if the guessed number is Higher than random numbre
     if (guessedNumber > randomNumber) {
       setMessage(
-        `Number ${guessedNumber} is Greater than the secret Number, Try Agin, you still have ${attemps} attempts`
+        `Number ${guessedNumber} is Greater than the secret Number, Try Again, you still have ${attemps} attempts`
       );
       setAttemps(attemps - 1);
       // checking if the guessed number is Less than random numbre
     } else if (guessedNumber < randomNumber) {
       setMessage(
-        `Number ${guessedNumber} is Less than the secret Number, Try Agin, you still have ${attemps} attempts`
+        `Number ${guessedNumber} is Less than the secret Number, Try Again, you still have ${attemps} attempts`
       );
       setAttemps(attemps - 1);
       // checking if the guessed number is higher than random numbre
