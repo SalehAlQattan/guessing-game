@@ -55,8 +55,6 @@ export const InputField = styled.input`
   border-radius: 5px;
 `;
 
-// in the styles full name
-
 export const SubmitButton = styled.button`
   background: ${({ theme }) => theme.backgroundColor};
   color: ${({ theme }) => theme.color};
@@ -74,7 +72,6 @@ export const ResetButton = styled.button`
   background: ${({ theme }) => theme.backgroundColor};
   color: ${({ theme }) => theme.color};
   padding: 0.5rem;
-  width: 53%;
   border-radius: 5px;
   font-weight: bold;
   text-transform: uppercase;
@@ -86,5 +83,7 @@ export const ResetButton = styled.button`
 export const Message = styled.div`
   h1 {
     color: ${({ theme }) => theme.backgroundColor};
+    width: 60%;
+    margin: 0 auto;
   }
 `;

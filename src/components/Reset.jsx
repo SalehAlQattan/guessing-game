@@ -7,7 +7,7 @@ const Reset = ({ setMessage, setAttemps }) => {
     setAttemps(4);
   };
 
-  return <ResetButton onClick={handleClick}>Reset</ResetButton>;
+  return <ResetButton onClick={handleClick}>Play Again</ResetButton>;
 };
 
 export default Reset;

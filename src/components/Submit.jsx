@@ -52,7 +52,9 @@ const Submit = ({ guessedNumber }) => {
       <Message>
         <h1>{message}</h1>
       </Message>
-      <Reset setAttemps={setAttemps} setMessage={setMessage} />
+      {attemps === 4 && message !== '' && (
+        <Reset setAttemps={setAttemps} setMessage={setMessage} />
+      )}
     </>
   );
 };

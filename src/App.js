@@ -9,12 +9,12 @@ import Input from './components/Input';
 // Creating the theme
 const theme = {
   dark: {
-    color: '#E4E6EB',
-    backgroundColor: '#242526',
+    color: '#A8DADC',
+    backgroundColor: '#1D3557',
   },
   light: {
-    color: '#242526',
-    backgroundColor: '#E4E6EB',
+    color: '#1D3557',
+    backgroundColor: '#A8DADC',
   },
 };
 
