@@ -20,29 +20,32 @@ const Submit = ({ guessedNumber }) => {
   const handleClick = () => {
     console.log(`this is attempts ${attemps}`);
     // checking if the guessed number is Higher than random numbre
-    if (guessedNumber > randomNumber) {
-      setMessage(
-        `${guessedNumber} is worng go down , ${attemps} attempts left`
-      );
-      setAttemps(attemps - 1);
-      // checking if the guessed number is Less than random numbre
-    } else if (guessedNumber < randomNumber) {
-      setMessage(`${guessedNumber} is worng go up , ${attemps} attempts left`);
-      setAttemps(attemps - 1);
-      // checking if the guessed number is higher than random numbre
-    } else if (guessedNumber === randomNumber) {
-      setMessage(`Correct The Secret Number is ${guessedNumber}`);
+    if (guessedNumber === randomNumber) {
+      setMessage(`YOU WON HAPEEPI`)
       setRandomNumber(Math.floor(Math.random() * (max - min + 1) + min));
       setAttemps(4);
     }
+    else {
+      setAttemps(attemps - 1);
+      console.log(`this is random ${randomNumber}`);
+      if (attemps === 0) {
+        setMessage(`You Lose, The Secret Number is ${randomNumber}, Try Again`);
+        setRandomNumber(Math.floor(Math.random() * (max - min + 1) + min));
+        setAttemps(4);
+      }
+      else if (guessedNumber > randomNumber) {
+        setMessage(
+          `${guessedNumber} is worng go down , ${attemps} attempts left`
+        );
+      }
+      else {
+        setMessage(`${guessedNumber} is worng go up , ${attemps} attempts left`);
+      }
+    }
+  }
     //
-    if (attemps === 0) {
-      setMessage(`You Lose, The Secret Number is ${randomNumber}, Try Again`);
-      setRandomNumber(Math.floor(Math.random() * (max - min + 1) + min));
-      setAttemps(4);
-    }
-    console.log(`this is random ${randomNumber}`);
-  };
+
+
 
   return (
     <>
